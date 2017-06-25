@@ -1,12 +1,12 @@
 $(call inherit-product, device/lge/h910/full_h910.mk)
 
-# Inherit some common stuff.
-$(call inherit-product, vendor/deso/common.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Overlays (inherit after vendor/aokp to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_NAME := deso_h910
+PRODUCT_NAME := du_h910
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="v20" \
